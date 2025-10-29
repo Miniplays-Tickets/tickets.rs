@@ -1,4 +1,4 @@
-FROM rust:1-buster
+FROM rust:1-bookworm
 
 RUN apt-get install -y apt-transport-https
 RUN apt-get update && apt-get -y upgrade && apt-get -y install python3 openssl libssl-dev ca-certificates cmake
@@ -13,7 +13,7 @@ RUN rustup install nightly
 RUN cargo +nightly build --release --bin image-proxy
 
 # Prod container
-FROM debian:buster
+FROM debian:bookworm
 
 RUN apt-get update && apt-get -y upgrade && apt-get -y install openssl libssl-dev ca-certificates
 
