@@ -62,7 +62,7 @@ async fn run(config: Config) -> Result<()> {
         shard_count,
         presence: StatusUpdate::new(
             ActivityType::Watching, 
-            "auf deine Tickets".to_owned(),
+            "Schaut auf deine Tickets".to_owned(),
             StatusType::Online,
         ),
         large_sharding_buckets: config.large_sharding_buckets,
